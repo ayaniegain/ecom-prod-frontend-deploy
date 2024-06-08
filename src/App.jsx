@@ -7,7 +7,6 @@ import Register from "./component/pages/Auth/Register";
 import Login from "./component/pages/Auth/Login";
 import Dashboard from "./component/pages/user/Dashboard";
 import {Private} from "./component/Routes/Private";
-import ForgotPassword from "./component/pages/Auth/forgotPassword";
 import { AdminRoute } from "./component/Routes/AdminRoute";
 import AdminDashboard from "./component/pages/Admin/AdminDashboard";
 import CreateCatagory from "./component/pages/Admin/CreateCatagory";
@@ -20,6 +19,7 @@ import Search from "./component/pages/Search";
 import ProductDetails from "./component/pages/ProductDetails";
 import CartPage from "./component/pages/CartPage";
 import AdminOrder from "./component/pages/Admin/AdminOrder";
+import ForgotPassword from "./component/pages/Auth/ForgotPassword";
 
 function App() {
   return (
