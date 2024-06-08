@@ -1,14 +1,9 @@
-// vite.config.js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-import { defineConfig } from "vite";
-// import reactRefresh from "@vitejs/plugin-react-refresh";
-import react from '@vitejs/plugin-react';
-
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    // reactRefresh(), // Plugin for hot module replacement (HMR) during development
-    react(), // Plugin for handling React components and JSX
-  ],
+  plugins: [react()],
   server: {
     proxy: {
       '/api': {
@@ -18,15 +13,4 @@ export default defineConfig({
       },
     },
   },
-  build: {
-    rollupOptions: {
-      external: ["react", "react-dom","react-icons"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-        },
-      },
-    },
-  },
-});
+})

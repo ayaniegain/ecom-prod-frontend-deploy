@@ -7,7 +7,7 @@ import Button from "../../assets/Buttton";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/cart";
 import Simmer from "../../assets/Simmer";
-import { AiOutlineBars } from "react-icons/Ai";
+import togglelogo from "../../assets/images/controls.png"
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -126,12 +126,8 @@ function Home() {
     <Layout title={"Home"}>
       <div className="flex justify-center w-full gap-10 bg-gradient-to-t from-pink-100 via-gray-900 to-pink-100 ">
         <div className="my-12 relative">
-          <button
-            className="text-3xl absolute left-10 bg-white md:hidden block"
-            onClick={toggleSidebar}
-          >
-            <AiOutlineBars />
-          </button>
+        
+          <img src={togglelogo} alt="tt"  onClick={toggleSidebar} className="h-10 ml-12 -mt-4 md:hidden block"/>
         </div>
         {toggle && (
           <aside className="lg:w-1/5 p-4 mx-10 my-20 absolute md:relative sm:w-2/4 text-white bg-gradient-to-t from-pink-900 to-gray-900 transition-all duration-300">
