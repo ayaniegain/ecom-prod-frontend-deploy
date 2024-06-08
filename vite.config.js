@@ -8,6 +8,8 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://ecom-prod-backend-deploy.onrender.com',
+        changeOrigin: true,
+        secure: false,
       },
     },
   },
