@@ -1,12 +1,12 @@
 // vite.config.js
 
 import { defineConfig } from "vite";
-import reactRefresh from "@vitejs/plugin-react-refresh";
+// import reactRefresh from "@vitejs/plugin-react-refresh";
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [
-    reactRefresh(), // Plugin for hot module replacement (HMR) during development
+    // reactRefresh(), // Plugin for hot module replacement (HMR) during development
     react(), // Plugin for handling React components and JSX
   ],
   server: {
