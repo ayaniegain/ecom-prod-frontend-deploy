@@ -159,7 +159,7 @@ const uniqueCart = Object.values(objectsById);
                             onClick={() => handleRemove(item._id)}
                             className="font-bold -my-3"
                           >
-                            
+                            close
                           </button>
 
                           <svg
