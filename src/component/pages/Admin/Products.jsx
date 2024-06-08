@@ -11,7 +11,7 @@ function Products() {
   const getAllProducts = async () => {
     try {
       let { data } = await axios.get(
-        `/api/v1/product/getall-product`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/getall-product`
       );
       setProducts(data.products);
     } catch (error) {
@@ -41,7 +41,7 @@ function Products() {
                 <div className="max-w-sm bg-white   border my-4  border-gray-200 rounded-lg shadow">
                   <img
                     className="rounded-t-lg h-52 w-full"
-                    src={`/api/v1/product/photo-product/${item._id}`}
+                    src={`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/photo-product/${item._id}`}
                     alt="product image"
                   />
                   <div className="p-5">

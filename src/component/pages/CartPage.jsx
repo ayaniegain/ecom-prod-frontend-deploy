@@ -59,7 +59,7 @@ const uniqueCart = Object.values(objectsById);
   //get payment gateway token
   const getToken = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/product/braintree/token`);
+      const { data } = await axios.get(`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/braintree/token`);
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -76,7 +76,7 @@ const uniqueCart = Object.values(objectsById);
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post(`/api/v1/product/braintree/payment`, {
+      const { data } = await axios.post(`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/braintree/payment`, {
         nonce,
         cart,
       });
@@ -132,7 +132,7 @@ const uniqueCart = Object.values(objectsById);
                   {/* <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product-image" className="w-full rounded-lg sm:w-40" /> */}
                   <img
                     className="w-40 h-30 "
-                    src={`/api/v1/product/photo-product/${item._id}`}
+                    src={`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/photo-product/${item._id}`}
                     alt="Product Image"
                   />
                   <div className="md:ml-4  md:mx-40 md:flex md:w-full md:justify-between">

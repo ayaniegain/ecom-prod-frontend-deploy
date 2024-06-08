@@ -28,7 +28,7 @@ function Profile() {
     
     try {
       let { data } = await axios.put(
-        `/api/v1/auth/profile`,
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/auth/profile`,
         {
           name: formdata.name,
           email: formdata.email,

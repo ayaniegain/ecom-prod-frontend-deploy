@@ -19,7 +19,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`/api/v1/auth/register`, {
+      const res = await axios.post(`https://ecom-prod-backend-deploy.onrender.com/api/v1/auth/register`, {
         name: data.name,
         email: data.email,
         password: data.password,

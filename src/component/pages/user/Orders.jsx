@@ -11,7 +11,7 @@ function Orders() {
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/auth/orders`);
+      const { data } = await axios.get(`https://ecom-prod-backend-deploy.onrender.com/api/v1/auth/orders`);
       setOrders(data);
     } catch (error) {
       console.log(error);
@@ -60,7 +60,7 @@ function Orders() {
                         <div className="col-md-4">
                         <img
                     className="w-40 h-30 "
-                    src={`/api/v1/product/photo-product/${p._id}`}
+                    src={`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/photo-product/${p._id}`}
                     alt="Product Image"
                   />
                         </div>

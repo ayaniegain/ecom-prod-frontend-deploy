@@ -19,7 +19,7 @@ function ProductDetails() {
     try {
       // setLoading(true)
       let { data } = await axios.get(
-        `/api/v1/product/single-product/${slug}`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/single-product/${slug}`
         );
       setProducts(data?.product);
   getrelatedProducts(data?.product?._id,  data?.product?.category?._id);
@@ -34,7 +34,7 @@ function ProductDetails() {
     try {
       // setLoading(true)
       let { data } = await axios.get(
-        `/api/v1/product/related-product/${pid}/${cid}`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/related-product/${pid}/${cid}`
       );
 
       setRelatedProducts(data?.products);
@@ -67,7 +67,7 @@ function ProductDetails() {
             {_id?  <img
               alt="ecommerce"
               className="lg:w-80 w-full object-cover object-center rounded border border-gray-200"
-              src={`/api/v1/product/photo-product/${_id}`}
+              src={`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/photo-product/${_id}`}
 
             />  :'..loading...'}
            
@@ -239,7 +239,7 @@ function ProductDetails() {
           <div className="max-w-xs  h-80 rounded overflow-hidden shadow-lg border">
             <img
               className=" h-32 w-full "
-              src={`/api/v1/product/photo-product/${item._id}`}
+              src={`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/photo-product/${item._id}`}
               alt="Product Image"
             />
             <div className="px-6 py-4">

@@ -19,7 +19,7 @@ function CreateCategory() {
   async function getCategories() {
     try {
       let data = await axios.get(
-        `/api/v1/category/getall-category`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/category/getall-category`
       );
       setCategory(data?.data?.category);
     } catch (error) {
@@ -32,7 +32,7 @@ function CreateCategory() {
     try {
       if (id) {
         await axios.delete(
-          `/api/v1/category/delete-category/${id}`
+          `https://ecom-prod-backend-deploy.onrender.com/api/v1/category/delete-category/${id}`
         );
       }
       getCategories();
@@ -46,7 +46,7 @@ function CreateCategory() {
 
     try {
       let data = await axios.post(
-        `/api/v1/category/create-category`,
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/category/create-category`,
         {
           name,
         }
@@ -70,7 +70,7 @@ function CreateCategory() {
     e.preventDefault();
     try {
       const data = await axios.put(
-        `/api/v1/category/update-category/${selected._id}`,
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/category/update-category/${selected._id}`,
         { name: updatedName }
       );
 

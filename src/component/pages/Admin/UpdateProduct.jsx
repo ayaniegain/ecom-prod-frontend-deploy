@@ -21,7 +21,7 @@ function UpdateProduct() {
   async function getSingleProduct() {
     try {
       let { data } = await axios.get(
-        `/api/v1/product/single-product/${param.slug}`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/single-product/${param.slug}`
       );
 
       setName(data?.product?.name);
@@ -38,7 +38,7 @@ function UpdateProduct() {
   // Get categories
   async function getCategories() {
     try {
-      let { data } = await axios.get(`/api/v1/category/getall-category`);
+      let { data } = await axios.get(`https://ecom-prod-backend-deploy.onrender.com/api/v1/category/getall-category`);
       setcategories(data?.category);
     } catch (error) {
       toast.error("Something went wrong in updating categories");
@@ -51,7 +51,7 @@ function UpdateProduct() {
     const confirmation = window.confirm("Are you sure you want to delete this product?");
     if (confirmation) {
       try {
-        let { data } = await axios.delete(`/api/v1/product/delete-product/${id}`);
+        let { data } = await axios.delete(`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/delete-product/${id}`);
         if (data?.success) {
           toast.success("Product deleted successfully");
           navigate("/dashboard/admin/products");
@@ -76,7 +76,7 @@ function UpdateProduct() {
       photo && productData.append("photo", photo);
       productData.append("category", category);
 
-      const { data } = await axios.put(`/api/v1/product/update-product/${id}`, productData);
+      const { data } = await axios.put(`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/update-product/${id}`, productData);
 
       if (data?.success) {
         toast.success("Product updated successfully");
@@ -171,7 +171,7 @@ function UpdateProduct() {
                 ) : (
                   <div className="text-center">
                     <img
-                      src={`/api/v1/product/photo-product/${id}`}
+                      src={`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/photo-product/${id}`}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive h-52"

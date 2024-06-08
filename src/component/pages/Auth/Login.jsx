@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      let res = await axios.post(`/api/v1/auth/login`, {
+      let res = await axios.post(`https://ecom-prod-backend-deploy.onrender.com/api/v1/auth/login`, {
         email: data.email,
         password: data.password
       })

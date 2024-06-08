@@ -11,7 +11,7 @@ export const Private = () => {
   useEffect(() => {
     let authCheck = async () => {
       let res = await axios.get(
-        `/api/v1/auth/user-auth`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/auth/user-auth`
       );
       // console.log(res)
       if (res.data.ok) {

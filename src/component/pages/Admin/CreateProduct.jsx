@@ -18,7 +18,7 @@ function CreateProduct() {
 
   async function getCatagoryApi() {
     try {
-      let data = await axios.get(`/api/v1/category/getall-category`);
+      let data = await axios.get(`https://ecom-prod-backend-deploy.onrender.com/api/v1/category/getall-category`);
       setcategories(data?.data?.category);
     } catch (error) {
       toast.error("something went wrong in create Categories");
@@ -43,7 +43,7 @@ function CreateProduct() {
       productData.append("category", category);
 
       const { data } = await axios.post(
-        `/api/v1/product/create-product`,
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/create-product`,
         productData
       );
       if (data?.success) {

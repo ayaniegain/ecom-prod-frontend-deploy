@@ -11,7 +11,7 @@ export const AdminRoute = () => {
   useEffect(() => {
     let authCheck = async () => {
       let res = await axios.get(
-        `/api/v1/auth/admin-auth`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/auth/admin-auth`
       );
       // console.log(res)
       if (res.data.ok) {

@@ -18,7 +18,7 @@ function ForgotPassword() {
 
     try {
       let res = await axios.post(
-        `/api/v1/auth/forgot-password`,
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/auth/forgot-password`,
         {
           email: data.email,
           newPassword: data.newPassword,

@@ -52,7 +52,7 @@ function Search() {
                     <div className="max-w-xs w-64 h-full rounded overflow-hidden shadow-lg border">
                       <img
                         className="w-full "
-                        src={`/api/v1/product/photo-product/${item._id}`}
+                        src={`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/photo-product/${item._id}`}
                         alt="Product Image"
                       />
                       <div className="px-6 py-4">

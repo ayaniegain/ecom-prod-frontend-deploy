@@ -23,7 +23,7 @@ function Home() {
 
   async function getAllCatagories() {
     try {
-      let data = await axios.get(`/api/v1/category/getall-category`);
+      let data = await axios.get(`https://ecom-prod-backend-deploy.onrender.com/api/v1/category/getall-category`);
       setCategories(data?.data?.category);
     } catch (error) {
       toast.error("something went wrong in create Categories");
@@ -33,7 +33,7 @@ function Home() {
 
   const getAllProducts = async () => {
     try {
-      let { data } = await axios.get(`/api/v1/product/getall-product`);
+      let { data } = await axios.get(`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/getall-product`);
       if (!controlFilter) {
         setTimeout(() => {
           setProducts(data?.products);
@@ -68,7 +68,7 @@ function Home() {
   const filteredProduct = async () => {
     try {
       const { data } = await axios.post(
-        `/api/v1/product/product-filters`,
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/product-filters`,
         { checked, radio }
       );
       if (controlFilter) {
@@ -82,7 +82,7 @@ function Home() {
   const fetchsortedProducts = async () => {
     try {
       const { data } = await axios.get(
-        `/api/v1/product/product-sort?sort=${sort}`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/product-sort?sort=${sort}`
       );
       setProducts(data?.products);
     } catch (error) {
@@ -213,7 +213,7 @@ function Home() {
                       <div className="w-60 h-full overflow-hidden flex flex-col rounded shadow-lg border bg-white">
                         <img
                           className="h-64 w-full"
-                          src={`/api/v1/product/photo-product/${item._id}`}
+                          src={`https://ecom-prod-backend-deploy.onrender.com/api/v1/product/photo-product/${item._id}`}
                           alt="Product Image"
                         />
                         <div className="px-6 py-4 flex flex-col justify-start">

@@ -16,7 +16,7 @@ function SearchInput() {
   const getAllProducts = async () => {
     try {
       let { data } = await axios.get(
-        `/api/v1/product/getall-product`
+        `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/getall-product`
       );
 
       let fldata = data.products.filter(
@@ -40,7 +40,7 @@ function SearchInput() {
     try {
       if (values.keyword) {
         const { data } = await axios.get(
-          `/api/v1/product/search/${
+          `https://ecom-prod-backend-deploy.onrender.com/api/v1/product/search/${
             values.keyword
           }`
         );
